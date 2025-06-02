@@ -1,8 +1,8 @@
 console.log('World');
 
 //npm i express --save
-//npm config set proxy http://192.168.1.33:3128
-//npm config set https-proxy http://192.168.1.33:3128
+//npm config set proxy http://192.xxx.x.xx:3128
+//npm config set https-proxy http://192.xxx.x.xx:3128
 //npm config set syrict-ssl false
 //npm init (инициализируем проект через cmd)
 //npm config delete https-proxy
