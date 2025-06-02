@@ -3,7 +3,6 @@
 
 ---
 ## Установка express и сохранение в dependencies
-
 npm i express --save
 ---
 
