@@ -1,33 +1,39 @@
 # Simple_full_stack_project
 В данном проекте я создал небольшой одностраничный сайт, который предпологается использовать как магазин, доставляющий печенье. Также было положено начало созданию клиент-серверной части с использованием Node.js и Express.js
 
-// Устанавливаем express и сохраняем его в зависимости проекта
-// npm i express --save
+# Установка express и сохранение в dependencies
+npm i express --save
 
-// Устанавливаем HTTP-прокси (если нужно работать через прокси-сервер)
-// npm config set proxy http://192.xxx.x.xx:3128
+# Настройка HTTP-прокси (для работы через локальный или корпоративный прокси-сервер)
+npm config set proxy http://192.xxx.x.xx:3128
 
-// Устанавливаем HTTPS-прокси (для защищённых соединений через прокси)
-// npm config set https-proxy http://192.xxx.x.xx:3128
+# Настройка HTTPS-прокси (для защищённых соединений через прокси)
+npm config set https-proxy http://192.xxx.x.xx:3128
 
-// Отключаем строгую проверку SSL-сертификатов (если есть проблемы с безопасными соединениями через прокси)
-// npm config set strict-ssl false
+# Отключение строгой проверки SSL (если возникают ошибки SSL через прокси)
+npm config set strict-ssl false
 
-// Инициализируем новый Node.js-проект (создание package.json через командную строку)
-// npm init
+# Инициализация нового Node.js-проекта (создание package.json)
+npm init
 
-// Удаляем настройки HTTPS-прокси из конфигурации npm (если больше не нужны)
-// npm config delete https-proxy
+# Удаление настроек HTTPS-прокси
+npm config delete https-proxy
 
-// Удаляем настройки HTTP-прокси из конфигурации npm (если больше не нужны)
-// npm config delete proxy
+# Удаление настроек HTTP-прокси
+npm config delete proxy
 
-// Запускаем сервер с автообновлением при изменениях в файле server.js (Node 18+)
-// node --watch server.js
+# Запуск сервера с автообновлением при изменении файлов (доступно с Node.js 18.11+)
+node --watch server.js
 
-// Пример запроса по адресу localhost, возвращает данные с маршрута /cookies/3 (GET-запрос)
-// http://localhost:3000/cookies/3
+# GET-запрос по маршруту /cookies/3:
+GET http://localhost:3000/cookies/3
 
-// Проверка POST-запроса к серверу с использованием curl (отправка JSON)
-// curl -X POST http://localhost:3000/order -H "Content-Type: application/json" -d '{"cookie": "Шоколадное"}'
-// Ожидаемый ответ от сервера: {"status":"успешно","message":"Ваш заказ принят"}
+# POST-запрос с JSON-телом (проверка серверной части):
+curl -X POST http://localhost:3000/order -H "Content-Type: application/json" -d '{"cookie": "Шоколадное"}'
+
+# Ожидаемый ответ:
+{
+  "status": "успешно",
+  "message": "Ваш заказ принят"
+}
+
